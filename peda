@@ -1,0 +1,10 @@
+#! /bin/bash
+
+PEDADIR='/usr/lib/peda'
+
+# Test for the existence of a user .pedainit
+if [[ -f $HOME/.pedainit ]]; then
+    gdb --nh -ix "$PEDADIR/.pedainit" "$@"
+else
+    gdb --nh -ix "$PEDADIR/.pedainit_no_user" "$@"
+fi

@@ -28,14 +28,39 @@ PEDA - Python Exploit Development Assistance for GDB
   * `xormem` -- XOR a memory region with a key
 
 ## Installation
+### Cloning the repo (original method)
+```bash
+git clone https://github.com/xxc3nsoredxx/peda ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+echo "DONE! debug your program with gdb and enjoy"
+```
+The only differences between this repo and upstream are related to this README.md, git tags, and the method of execution (if installed through Portage).
+The `master` from upstream will always be merged unmodified into the `upstream-master` branch.
 
-    git clone https://github.com/longld/peda.git ~/peda
-    echo "source ~/peda/peda.py" >> ~/.gdbinit
-    echo "DONE! debug your program with gdb and enjoy"
+### Gentoo (unc3nsored overlay)
+Before installing, enable the [unc3nsored overlay][overlay].
+```bash
+emerge -av sys-devel/gdb-peda
+```
+To debug a program with PEDA, run:
+```
+peda <gdb args> <program to debug>
+```
+Add any PEDA-specific `.gdbinit` lines into `~/.pedainit`
+
+## Versioning
+Version numbers are `<upstream>_pYYYYMMDD` based on the date of the latest upstream commit included in the tag (US/Central time zone).
 
 ## Screenshot
-![start](http://i.imgur.com/P1BF5mp.png)
+![start][start]
 
-![pattern arg](http://i.imgur.com/W97OWRC.png)
+![pattern arg][pattern arg]
 
-![patts](http://i.imgur.com/Br24IpC.png)
+![patts][patts]
+
+
+<!-- link refs -->
+[overlay]: https://github.com/xxc3nsoredxx/unc3nsored
+[start]: img/start.png
+[pattern arg]: img/pattern_arg.png
+[patts]: img/patts.png

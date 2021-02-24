@@ -1,0 +1,2 @@
+source /usr/lib/peda/peda.py
+source ~/.pedainit
