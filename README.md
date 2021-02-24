@@ -28,7 +28,7 @@ PEDA - Python Exploit Development Assistance for GDB
   * `xormem` -- XOR a memory region with a key
 
 ## Installation
-### Cloning the repo (original method)
+### Cloning the repo (traditional method)
 ```bash
 git clone https://github.com/xxc3nsoredxx/peda ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit

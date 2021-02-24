@@ -1,6 +1,19 @@
 #! /bin/bash
 
+# !!! WARNING !!!
+# This script assumes PEDA is installed using Portage. If PEDA is installed
+# using the traditional `git clone` method then the filesystem will likely not
+# be set up correctly. Manual setup will be required for this script to work.
+# !!! WARNING !!!
+
 PEDADIR='/usr/lib/peda'
+
+# Print the above warning if this script is run from a potential non-Portage
+# installation
+if [[ ! -d $PEDADIR ]]; then
+    sed -n -e '/^# !!! WARNING !!!/,/^# !!! WARNING !!!/s/# //p' $0
+    exit 1
+fi
 
 # Test for the existence of a user .pedainit
 if [[ -f $HOME/.pedainit ]]; then
