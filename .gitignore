@@ -29,3 +29,6 @@ pip-log.txt
 # Vim files
 *.swp
 *.vim
+
+# Include Vim filetype files
+!vimfiles/**
