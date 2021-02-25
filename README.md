@@ -40,7 +40,7 @@ The `master` from upstream will always be merged unmodified into the `upstream-m
 ### Gentoo (unc3nsored overlay)
 Before installing, enable the [unc3nsored overlay][overlay].
 ```bash
-emerge -av sys-devel/gdb-peda
+emerge -av sys-devel/peda
 ```
 To debug a program with PEDA, run:
 ```
